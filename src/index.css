@@ -1,13 +1,125 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f1f5f8;
+  padding: 10px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  margin: 30px 0;
+  justify-content: center;
+}
+
+.container h3 {
+  font-size: 1.7rem;
+  margin: 0 20px;
+  letter-spacing: 0.1rem;
+}
+
+.input-group {
+  margin-bottom: 10px;
+}
+
+form input {
+  height: 40px;
+  width: 150px;
+  border: none;
+  font-size: 1.2rem;
+  padding: 0 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+form input:focus {
+  outline: none;
+  border: 2px solid #54a6e9;
+}
+
+#shades {
+  width: 65px;
+}
+
+.error,
+.error:focus {
+  border: 2px solid red;
+}
+
+.btn {
+  height: 40px;
+  border: none;
+  padding: 0 10px;
+  line-height: 30px;
+  font-size: 1.2rem;
+  color: #fefefe;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid #f1f5f8;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn-submit {
+  background-color: #54a6e9;
+  border-radius: 0 3px 3px 0;
+}
+
+.btn-submit:hover {
+  background-color: #fefefe;
+  color: #54a6e9;
+  border: 1px solid #54a6e9;
+  cursor: pointer;
+}
+
+.btn-random {
+  margin-left: 10px;
+  background-color: #789a9a;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.btn-random:hover {
+  color: #789a9a;
+  background-color: #fff;
+  border: 1px solid #789a9a;
+}
+
+.colors {
+  min-height: calc(100vh - 200px);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.color {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.color-light {
+  color: #fefefe;
+}
+
+.alert {
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  margin: 10px auto;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .alert {
+    font-size: 0.8rem;
+  }
 }
